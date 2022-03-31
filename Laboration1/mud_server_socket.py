@@ -1,4 +1,5 @@
 import socket
+import time
 
 """
 small_mud.py, Thomas Lundqvist, 2019-2022, use freely!
@@ -45,3 +46,4 @@ while True:
                 conn.send(parse_and_execute(data).encode())
         print(f"Connection to {addr} lost.")
     print("Bye.")
+    time.sleep(0.1)
