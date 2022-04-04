@@ -11,8 +11,7 @@ try:
         who = input("> ")
         main = "SELECT unit, startdate, stopdate FROM reservations WHERE account = (SELECT user_id FROM users WHERE username =%s)"
         mycursor.execute(main, (who,))
-
-
+        
         result = mycursor.fetchall()
         if result:
             for (unit, startdate, stopdate) in result:            
